@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
 	<meta charset="UTF-8">
 	<title>Basic Chat App</title>
@@ -9,21 +8,17 @@
 
 <body>
 	<main>
-		<ol class="history">
-			<li>KV says: hey there,DV</li>
-			<li>DV says: Hiiii!!!</li>
-			<li>KV says: What's up DV?</li>
-			<li>DV says: Have any pretzels?</li>
-			<li>DV says: Sure, here you go KV!</li>
+		<ol id="history">
 		</ol>
 		<form>
-			<input id="initals" maxlength="2">
+			<input id="initials" maxlength="2">
 			<input id="message">
-			<button type="submit"> Send </button>
+			<button>Send</button>
 		</form>
 	</main>
 	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-<script src="/socket.io/socket.io.js"></script>
-<script src="app.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="app.js"></script>
 </body>
+
 </html>

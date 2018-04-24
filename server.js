@@ -8,12 +8,18 @@ app.use(express.static('client'));
 
 var io = require('socket.io')(server);
 
+var history = [];
+
 io.on('connection', function (socket) {
+  history.forEach(function (msg) {
+    socket.emit('message', msg);
+  });
   socket.on('message', function (msg) {
+    history.push(msg);
     io.emit('message', msg);
   });
 });
 
-server.listen(8080, function() {
+server.listen(process.env.PORT || 8080, function() {
   console.log('Chat server running');
 });
