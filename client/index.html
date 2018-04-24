@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Basic Chat App</title>
 	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 	<main>
 		<ol class="history">
@@ -15,10 +17,13 @@
 			<li>DV says: Sure, here you go KV!</li>
 		</ol>
 		<form>
-			<input id="initals">
+			<input id="initals" maxlength="2">
 			<input id="message">
-			<button> Send </button>
+			<button type="submit"> Send </button>
 		</form>
 	</main>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
